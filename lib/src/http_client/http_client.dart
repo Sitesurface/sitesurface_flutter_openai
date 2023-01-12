@@ -26,27 +26,6 @@ class HttpClient {
     return jsonDecode(response.body);
   }
 
-  // Make a GET request
-  Future<Map<String, dynamic>?> get(String path,
-      {Map<String, dynamic>? queryParams}) async {
-    var uri = Uri.https(baseUrl, "/v1$path");
-    var response = await http.get(
-        uri.replace(
-          queryParameters: queryParams,
-        ),
-        headers: _getHeaders());
-    return jsonDecode(response.body);
-  }
-
-  // Make a GET request
-  Future<Map<String, dynamic>?> delete(String path,
-      {Map<String, dynamic>? body}) async {
-    var uri = Uri.https(baseUrl, "/v1$path");
-    var response = await http.delete(uri,
-        body: jsonEncode(removeNull(body)), headers: _getHeaders());
-    return jsonDecode(response.body);
-  }
-
   /// Remove null values from map
   Map<String, dynamic>? removeNull(Map<String, dynamic>? requestBody) {
     requestBody?.removeWhere((key, value) => value == null);
