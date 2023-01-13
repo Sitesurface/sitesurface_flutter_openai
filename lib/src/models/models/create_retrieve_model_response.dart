@@ -22,7 +22,7 @@ class _Permission with _$_Permission {
   factory _Permission({
     required String id,
     required String object,
-    required String created,
+    required int created,
     required String organization,
     required dynamic group,
     @JsonKey(name: "allow_create_engine") required bool allowCreateEngine,

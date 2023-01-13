@@ -2,9 +2,6 @@ import 'package:flutter/foundation.dart';
 import 'package:sitesurface_flutter_openai/sitesurface_flutter_openai.dart';
 import 'package:sitesurface_flutter_openai/src/images/models/create_image_edit_response.dart';
 import 'package:sitesurface_flutter_openai/src/images/models/create_image_response.dart';
-
-import '../models/create_image_edit_request.dart';
-import '../models/create_image_variation_request.dart';
 import '../models/create_image_variation_response.dart';
 
 /// Given a prompt and/or an input image, the model will generate a new image.

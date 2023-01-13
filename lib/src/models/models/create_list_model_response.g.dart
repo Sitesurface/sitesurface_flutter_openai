@@ -25,10 +25,7 @@ Map<String, dynamic> _$$_CreateListModelResponseToJson(
 _$__Data _$$__DataFromJson(Map<String, dynamic> json) => _$__Data(
       id: json['id'] as String,
       object: json['object'] as String,
-      created: json['created'] as int,
       ownedBy: json['owned_by'] as String,
-      root: json['root'] as String,
-      parent: json['parent'],
       permission: (json['permission'] as List<dynamic>)
           .map((e) => _Permission.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -37,10 +34,7 @@ _$__Data _$$__DataFromJson(Map<String, dynamic> json) => _$__Data(
 Map<String, dynamic> _$$__DataToJson(_$__Data instance) => <String, dynamic>{
       'id': instance.id,
       'object': instance.object,
-      'created': instance.created,
       'owned_by': instance.ownedBy,
-      'root': instance.root,
-      'parent': instance.parent,
       'permission': instance.permission.map((e) => e.toJson()).toList(),
     };
 
@@ -48,7 +42,7 @@ _$__Permission _$$__PermissionFromJson(Map<String, dynamic> json) =>
     _$__Permission(
       id: json['id'] as String,
       object: json['object'] as String,
-      created: json['created'] as String,
+      created: json['created'] as int,
       organization: json['organization'] as String,
       group: json['group'],
       allowCreateEngine: json['allow_create_engine'] as bool,

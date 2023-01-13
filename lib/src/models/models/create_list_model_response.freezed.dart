@@ -189,11 +189,8 @@ _Data _$_DataFromJson(Map<String, dynamic> json) {
 mixin _$_Data {
   String get id => throw _privateConstructorUsedError;
   String get object => throw _privateConstructorUsedError;
-  int get created => throw _privateConstructorUsedError;
   @JsonKey(name: "owned_by")
   String get ownedBy => throw _privateConstructorUsedError;
-  String get root => throw _privateConstructorUsedError;
-  dynamic get parent => throw _privateConstructorUsedError;
   List<_Permission> get permission => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -209,10 +206,7 @@ abstract class _$DataCopyWith<$Res> {
   $Res call(
       {String id,
       String object,
-      int created,
       @JsonKey(name: "owned_by") String ownedBy,
-      String root,
-      dynamic parent,
       List<_Permission> permission});
 }
 
@@ -231,10 +225,7 @@ class __$DataCopyWithImpl<$Res, $Val extends _Data>
   $Res call({
     Object? id = null,
     Object? object = null,
-    Object? created = null,
     Object? ownedBy = null,
-    Object? root = null,
-    Object? parent = freezed,
     Object? permission = null,
   }) {
     return _then(_value.copyWith(
@@ -246,22 +237,10 @@ class __$DataCopyWithImpl<$Res, $Val extends _Data>
           ? _value.object
           : object // ignore: cast_nullable_to_non_nullable
               as String,
-      created: null == created
-          ? _value.created
-          : created // ignore: cast_nullable_to_non_nullable
-              as int,
       ownedBy: null == ownedBy
           ? _value.ownedBy
           : ownedBy // ignore: cast_nullable_to_non_nullable
               as String,
-      root: null == root
-          ? _value.root
-          : root // ignore: cast_nullable_to_non_nullable
-              as String,
-      parent: freezed == parent
-          ? _value.parent
-          : parent // ignore: cast_nullable_to_non_nullable
-              as dynamic,
       permission: null == permission
           ? _value.permission
           : permission // ignore: cast_nullable_to_non_nullable
@@ -279,10 +258,7 @@ abstract class _$$__DataCopyWith<$Res> implements _$DataCopyWith<$Res> {
   $Res call(
       {String id,
       String object,
-      int created,
       @JsonKey(name: "owned_by") String ownedBy,
-      String root,
-      dynamic parent,
       List<_Permission> permission});
 }
 
@@ -297,10 +273,7 @@ class __$$__DataCopyWithImpl<$Res> extends __$DataCopyWithImpl<$Res, _$__Data>
   $Res call({
     Object? id = null,
     Object? object = null,
-    Object? created = null,
     Object? ownedBy = null,
-    Object? root = null,
-    Object? parent = freezed,
     Object? permission = null,
   }) {
     return _then(_$__Data(
@@ -312,22 +285,10 @@ class __$$__DataCopyWithImpl<$Res> extends __$DataCopyWithImpl<$Res, _$__Data>
           ? _value.object
           : object // ignore: cast_nullable_to_non_nullable
               as String,
-      created: null == created
-          ? _value.created
-          : created // ignore: cast_nullable_to_non_nullable
-              as int,
       ownedBy: null == ownedBy
           ? _value.ownedBy
           : ownedBy // ignore: cast_nullable_to_non_nullable
               as String,
-      root: null == root
-          ? _value.root
-          : root // ignore: cast_nullable_to_non_nullable
-              as String,
-      parent: freezed == parent
-          ? _value.parent
-          : parent // ignore: cast_nullable_to_non_nullable
-              as dynamic,
       permission: null == permission
           ? _value._permission
           : permission // ignore: cast_nullable_to_non_nullable
@@ -342,10 +303,7 @@ class _$__Data implements __Data {
   _$__Data(
       {required this.id,
       required this.object,
-      required this.created,
       @JsonKey(name: "owned_by") required this.ownedBy,
-      required this.root,
-      required this.parent,
       required final List<_Permission> permission})
       : _permission = permission;
 
@@ -357,14 +315,8 @@ class _$__Data implements __Data {
   @override
   final String object;
   @override
-  final int created;
-  @override
   @JsonKey(name: "owned_by")
   final String ownedBy;
-  @override
-  final String root;
-  @override
-  final dynamic parent;
   final List<_Permission> _permission;
   @override
   List<_Permission> get permission {
@@ -375,7 +327,7 @@ class _$__Data implements __Data {
 
   @override
   String toString() {
-    return '_Data(id: $id, object: $object, created: $created, ownedBy: $ownedBy, root: $root, parent: $parent, permission: $permission)';
+    return '_Data(id: $id, object: $object, ownedBy: $ownedBy, permission: $permission)';
   }
 
   @override
@@ -385,24 +337,14 @@ class _$__Data implements __Data {
             other is _$__Data &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.object, object) || other.object == object) &&
-            (identical(other.created, created) || other.created == created) &&
             (identical(other.ownedBy, ownedBy) || other.ownedBy == ownedBy) &&
-            (identical(other.root, root) || other.root == root) &&
-            const DeepCollectionEquality().equals(other.parent, parent) &&
             const DeepCollectionEquality()
                 .equals(other._permission, _permission));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      object,
-      created,
-      ownedBy,
-      root,
-      const DeepCollectionEquality().hash(parent),
+  int get hashCode => Object.hash(runtimeType, id, object, ownedBy,
       const DeepCollectionEquality().hash(_permission));
 
   @JsonKey(ignore: true)
@@ -423,10 +365,7 @@ abstract class __Data implements _Data {
   factory __Data(
       {required final String id,
       required final String object,
-      required final int created,
       @JsonKey(name: "owned_by") required final String ownedBy,
-      required final String root,
-      required final dynamic parent,
       required final List<_Permission> permission}) = _$__Data;
 
   factory __Data.fromJson(Map<String, dynamic> json) = _$__Data.fromJson;
@@ -436,14 +375,8 @@ abstract class __Data implements _Data {
   @override
   String get object;
   @override
-  int get created;
-  @override
   @JsonKey(name: "owned_by")
   String get ownedBy;
-  @override
-  String get root;
-  @override
-  dynamic get parent;
   @override
   List<_Permission> get permission;
   @override
@@ -460,7 +393,7 @@ _Permission _$_PermissionFromJson(Map<String, dynamic> json) {
 mixin _$_Permission {
   String get id => throw _privateConstructorUsedError;
   String get object => throw _privateConstructorUsedError;
-  String get created => throw _privateConstructorUsedError;
+  int get created => throw _privateConstructorUsedError;
   String get organization => throw _privateConstructorUsedError;
   dynamic get group => throw _privateConstructorUsedError;
   @JsonKey(name: "allow_create_engine")
@@ -493,7 +426,7 @@ abstract class _$PermissionCopyWith<$Res> {
   $Res call(
       {String id,
       String object,
-      String created,
+      int created,
       String organization,
       dynamic group,
       @JsonKey(name: "allow_create_engine") bool allowCreateEngine,
@@ -543,7 +476,7 @@ class __$PermissionCopyWithImpl<$Res, $Val extends _Permission>
       created: null == created
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       organization: null == organization
           ? _value.organization
           : organization // ignore: cast_nullable_to_non_nullable
@@ -595,7 +528,7 @@ abstract class _$$__PermissionCopyWith<$Res>
   $Res call(
       {String id,
       String object,
-      String created,
+      int created,
       String organization,
       dynamic group,
       @JsonKey(name: "allow_create_engine") bool allowCreateEngine,
@@ -643,7 +576,7 @@ class __$$__PermissionCopyWithImpl<$Res>
       created: null == created
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       organization: null == organization
           ? _value.organization
           : organization // ignore: cast_nullable_to_non_nullable
@@ -709,7 +642,7 @@ class _$__Permission implements __Permission {
   @override
   final String object;
   @override
-  final String created;
+  final int created;
   @override
   final String organization;
   @override
@@ -803,7 +736,7 @@ abstract class __Permission implements _Permission {
   factory __Permission(
       {required final String id,
       required final String object,
-      required final String created,
+      required final int created,
       required final String organization,
       required final dynamic group,
       @JsonKey(name: "allow_create_engine")
@@ -829,7 +762,7 @@ abstract class __Permission implements _Permission {
   @override
   String get object;
   @override
-  String get created;
+  int get created;
   @override
   String get organization;
   @override

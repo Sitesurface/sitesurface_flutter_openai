@@ -21,10 +21,7 @@ class _Data with _$_Data {
   factory _Data({
     required String id,
     required String object,
-    required int created,
     @JsonKey(name: "owned_by") required String ownedBy,
-    required String root,
-    required dynamic parent,
     required List<_Permission> permission,
   }) = __Data;
 
@@ -36,7 +33,7 @@ class _Permission with _$_Permission {
   factory _Permission({
     required String id,
     required String object,
-    required String created,
+    required int created,
     required String organization,
     required dynamic group,
     @JsonKey(name: "allow_create_engine") required bool allowCreateEngine,

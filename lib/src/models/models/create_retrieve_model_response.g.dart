@@ -30,7 +30,7 @@ _$__Permission _$$__PermissionFromJson(Map<String, dynamic> json) =>
     _$__Permission(
       id: json['id'] as String,
       object: json['object'] as String,
-      created: json['created'] as String,
+      created: json['created'] as int,
       organization: json['organization'] as String,
       group: json['group'],
       allowCreateEngine: json['allow_create_engine'] as bool,

@@ -243,7 +243,7 @@ _Permission _$_PermissionFromJson(Map<String, dynamic> json) {
 mixin _$_Permission {
   String get id => throw _privateConstructorUsedError;
   String get object => throw _privateConstructorUsedError;
-  String get created => throw _privateConstructorUsedError;
+  int get created => throw _privateConstructorUsedError;
   String get organization => throw _privateConstructorUsedError;
   dynamic get group => throw _privateConstructorUsedError;
   @JsonKey(name: "allow_create_engine")
@@ -276,7 +276,7 @@ abstract class _$PermissionCopyWith<$Res> {
   $Res call(
       {String id,
       String object,
-      String created,
+      int created,
       String organization,
       dynamic group,
       @JsonKey(name: "allow_create_engine") bool allowCreateEngine,
@@ -326,7 +326,7 @@ class __$PermissionCopyWithImpl<$Res, $Val extends _Permission>
       created: null == created
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       organization: null == organization
           ? _value.organization
           : organization // ignore: cast_nullable_to_non_nullable
@@ -378,7 +378,7 @@ abstract class _$$__PermissionCopyWith<$Res>
   $Res call(
       {String id,
       String object,
-      String created,
+      int created,
       String organization,
       dynamic group,
       @JsonKey(name: "allow_create_engine") bool allowCreateEngine,
@@ -426,7 +426,7 @@ class __$$__PermissionCopyWithImpl<$Res>
       created: null == created
           ? _value.created
           : created // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       organization: null == organization
           ? _value.organization
           : organization // ignore: cast_nullable_to_non_nullable
@@ -492,7 +492,7 @@ class _$__Permission implements __Permission {
   @override
   final String object;
   @override
-  final String created;
+  final int created;
   @override
   final String organization;
   @override
@@ -586,7 +586,7 @@ abstract class __Permission implements _Permission {
   factory __Permission(
       {required final String id,
       required final String object,
-      required final String created,
+      required final int created,
       required final String organization,
       required final dynamic group,
       @JsonKey(name: "allow_create_engine")
@@ -612,7 +612,7 @@ abstract class __Permission implements _Permission {
   @override
   String get object;
   @override
-  String get created;
+  int get created;
   @override
   String get organization;
   @override

@@ -19,9 +19,7 @@ class EmbeddingRepository {
   ///[User] A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. [Learn more](https://beta.openai.com/docs/guides/safety-best-practices/end-user-ids).
 
   Future<CreateEmbeddingResponse?> createEmbeddings(
-      {required String model,
-      required String input,
-      required String? user}) async {
+      {required String model, required String input, String? user}) async {
     Map<String, dynamic>? body;
     body = {
       'model': model,

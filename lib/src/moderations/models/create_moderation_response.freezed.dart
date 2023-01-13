@@ -257,7 +257,7 @@ class __$ResultsCopyWithImpl<$Res, $Val extends _Results>
   $Res call({
     Object? flagged = null,
     Object? categories = null,
-    Object? categoryScore = null,
+    Object? categoryScore = freezed,
   }) {
     return _then(_value.copyWith(
       flagged: null == flagged
@@ -268,7 +268,7 @@ class __$ResultsCopyWithImpl<$Res, $Val extends _Results>
           ? _value.categories
           : categories // ignore: cast_nullable_to_non_nullable
               as _Category,
-      categoryScore: null == categoryScore
+      categoryScore: freezed == categoryScore
           ? _value.categoryScore
           : categoryScore // ignore: cast_nullable_to_non_nullable
               as _CategoryScore,
@@ -313,7 +313,7 @@ class __$$__ResultsCopyWithImpl<$Res>
   $Res call({
     Object? flagged = null,
     Object? categories = null,
-    Object? categoryScore = null,
+    Object? categoryScore = freezed,
   }) {
     return _then(_$__Results(
       flagged: null == flagged
@@ -324,7 +324,7 @@ class __$$__ResultsCopyWithImpl<$Res>
           ? _value.categories
           : categories // ignore: cast_nullable_to_non_nullable
               as _Category,
-      categoryScore: null == categoryScore
+      categoryScore: freezed == categoryScore
           ? _value.categoryScore
           : categoryScore // ignore: cast_nullable_to_non_nullable
               as _CategoryScore,
@@ -374,14 +374,14 @@ class _$__Results with DiagnosticableTreeMixin implements __Results {
             (identical(other.flagged, flagged) || other.flagged == flagged) &&
             (identical(other.categories, categories) ||
                 other.categories == categories) &&
-            (identical(other.categoryScore, categoryScore) ||
-                other.categoryScore == categoryScore));
+            const DeepCollectionEquality()
+                .equals(other.categoryScore, categoryScore));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, flagged, categories, categoryScore);
+  int get hashCode => Object.hash(runtimeType, flagged, categories,
+      const DeepCollectionEquality().hash(categoryScore));
 
   @JsonKey(ignore: true)
   @override
